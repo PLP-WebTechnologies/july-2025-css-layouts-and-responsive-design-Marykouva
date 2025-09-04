@@ -1,0 +1,98 @@
+/* General Reset */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f9;
+  color: #000000;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #cc0099;
+  color: white;
+  padding: 25px;
+}
+
+/* Navigation using Flexbox */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  background-color: #f7e6f4;
+}
+nav ul li {
+  margin: 0 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #cc0099;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: #ff00f2;
+}
+
+/* Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #ffe6f7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.0);
+}
+
+/* Content area with Flexbox for cards */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border: 2px solid #cc0099;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 calc(33% - 20px);
+  min-width: 250px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #cc0099;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+.card{
+  flex: 1 1 100%;
+  }
+}
